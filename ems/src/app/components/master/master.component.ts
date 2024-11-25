@@ -1,12 +1,23 @@
 import { Component } from '@angular/core';
+import { RolesComponent } from '../roles/roles.component';
+import { DesiniationComponent } from '../desiniation/desiniation.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-master',
   standalone: true,
-  imports: [],
+  imports: [RolesComponent,DesiniationComponent,CommonModule],
   templateUrl: './master.component.html',
   styleUrl: './master.component.css'
 })
 export class MasterComponent {
+
+  currentComponent:string="Roles";
+
+  changeTab(tabName:string){
+    this.currentComponent=tabName;
+    
+
+  }
 
 }
